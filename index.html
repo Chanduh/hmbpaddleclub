@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Half Moon Bay Paddle Club</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-sun"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Half Moon Bay Paddle Club</h1>
+									</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<li><a href="#members">Members</a></li>
+
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+				
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="images/members.jpg" alt="" /></span>
+								<p>
+									Half Moon Bay Paddle Club is a members-only club nestled in the
+									scenic coastal town of Half Moon Bay, California. Our club is
+									dedicated to providing an exceptional paddling experience for
+									water enthusiasts of all levels.
+								</p>
+								<p>
+									With our pristine natural surroundings, breathtaking ocean
+									views, and a tight-knit community of paddlers, we offer the
+									perfect haven for those seeking adventure, relaxation, and a
+									sense of belonging.
+								</p>
+								<p>
+									Whether you are a seasoned paddleboarder or new to the sport,
+									our club offers a variety of exciting events and activities to
+									suit your interests.
+								</p>
+								<h2 id="join" className={styles.alert}>
+									2025 Membership closed
+								</h2>							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact us</h2>
+								<p>123 Ocean Blvd</br>Half Moon Bay, CA 94019</br>703.967.8117</p>
+								<form
+									onsubmit="window.location.href = 
+										'mailto:halfmoonbaypaddleclub@gmail.com?subject=Contact Form Submission' +
+										'&body=' + encodeURIComponent(document.getElementById('message').value) + 
+										'%0D%0A%0D%0A' + encodeURIComponent(document.getElementById('name').value) + 
+										'%0D%0A' + encodeURIComponent(document.getElementById('phone').value); 
+										return false;">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="phone">Phone</label>
+											<input type="text" name="phone" id="phone" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+							</article>
+							
+								<!-- Members Only -->
+								<article id="members">
+									<h2 class="major">Sign In</h2>
+									<form onsubmit="event.preventDefault(); showError();">
+								
+										<div class="fields">
+											<div class="field half">
+												<label for="username">Username</label>
+												<input type="text" name="username" id="username" />
+											</div>
+											<div class="field half">
+												<label for="password">Password</label>
+												<input type="password" name="password" id="password" />
+											</div>
+										</div>
+								
+										<ul class="actions">
+											<li><input type="submit" value="Sign in" class="primary" /></li>
+										</ul>
+								
+										<p id="error-message" style="display:none;color:red;">Incorrect password</p>
+								
+									</form>
+								
+									<script>
+										function showError() {
+											const errorMessage = document.getElementById('error-message');
+											const inputs = document.querySelectorAll('input');
+								
+											errorMessage.style.display = 'block';
+											inputs.forEach(input => {
+												input.style.border = '1px solid red';
+											});
+								
+											setTimeout(() => {
+												errorMessage.style.display = 'none';
+												inputs.forEach(input => {
+													input.style.border = ''; 
+												});
+											}, 1000); 
+										}
+									</script>
+								</article>
+								
+						
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Half Moon Bay Paddle Club 2024.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
